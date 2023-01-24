@@ -1,0 +1,34 @@
+/* COLOCAR ESSES DADOS COMO RESPOSTA DO CODIGO:
+
+Cliente: José das Couves
+
+Idade: 18 anos
+
+Classificação do filme: 12 anos 
+*/
+
+#include <stdio.h>
+
+struct Filme {
+    int class_indicativa;
+    int idade_cliente;
+    char apto[20];
+};
+
+int main() {
+    struct Filme filme;
+
+    printf("Qual é a classificação indicativa do filme? ");
+    scanf("%d", &filme.class_indicativa);
+
+    printf("Qual é a idade do cliente? ");
+    scanf("%d", &filme.idade_cliente);
+
+    if (filme.idade_cliente <= filme.class_indicativa) {
+        sprintf(filme.apto,"Não apto");
+    } else {
+        sprintf(filme.apto,"Apto");
+    }
+    printf("Classificação indicativa: %d\nIdade do cliente: %d\nAptidão para o cliente: %s",filme.class_indicativa,filme.idade_cliente,filme.apto);
+    return 0;
+}
