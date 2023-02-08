@@ -1,0 +1,53 @@
+Algoritmo "Verifica Idade"
+// 
+//  
+// Descrição   : Diz se é maior de idade ou nao,
+// Autor(a)    : Rarikmilkrai José Souza da Silva
+// Data atual  : 08/02/2023
+Var
+// Seção de Declarações das variáveis 
+         idade: Inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+         Inicio
+         
+   Escreva("Digite sua idade: ")
+   Leia(idade)
+   Se (idade >= 18) Então
+      Escreva("Você é maior de idade.")
+   Senão
+      Escreva("Você é menor de idade.")
+   FimSe
+
+Fimalgoritmo
+
+
+
+
+Algoritmo "Calcula a Potência"
+// 
+//  
+// Descrição   : Calculando Potência.
+// Autor(a)    : Rarikmilkrai José Souza da Silva
+// Data atual  : 08/02/2023
+Var
+// Seção de Declarações das variáveis 
+         base, expoente, potencia, cont: Inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+   Escreva("Digite o valor de base: ")
+   Leia(base)
+   Escreva("Digite o valor do expoente: ")
+   Leia(expoente)
+
+   potencia <- 1
+   para cont de 1 ate expoente faca
+      potencia <-  potencia * base
+   FimPara
+
+   Escreva("O resultado da ", base, " elevado a ", expoente, " é ", potencia)
+
+Fimalgoritmo

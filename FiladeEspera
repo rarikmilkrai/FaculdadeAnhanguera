@@ -1,0 +1,32 @@
+#include <stdio.h>
+#define MAX 100
+
+int contaClientesEsperandoMaisDe20Min(int entrouNaFila[], int tempoDeAtendimento[], int tamanho) {
+    int i, contador = 0;
+    for (i = 0; i < tamanho; i++) {
+        int tempoEspera = entrouNaFila[i] + tempoDeAtendimento[i];
+        if (tempoEspera - entrouNaFila[i] > 20)
+            contador++;
+    }
+    return contador;
+}
+
+int main() {
+    int entrouNaFila[MAX], tempoDeAtendimento[MAX];
+    int tamanho, i;
+
+    printf("Quantos clientes entraram na agencia? ");
+    scanf("%d", &tamanho);
+
+    for (i = 0; i < tamanho; i++) {
+        printf("Quando o cliente %d entrou na fila? ", i+1);
+        scanf("%d", &entrouNaFila[i]);
+        printf("Quantos minutos ele precisa para ser atendido? ");
+        scanf("%d", &tempoDeAtendimento[i]);
+    }
+
+    int resultado = contaClientesEsperandoMaisDe20Min(entrouNaFila, tempoDeAtendimento, tamanho);
+    printf("Quantidade de clientes esperando mais de 20 minutos: %d\n", resultado);
+
+    return 0;
+}
